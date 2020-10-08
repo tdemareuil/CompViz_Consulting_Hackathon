@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Construction site challenge - Success</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    th, td {
+      padding: 15px;
+      text-align: left;
+    }
+    table tr:nth-child(even) {
+      background-color: #eee;
+    }
+    table tr:nth-child(odd) {
+     background-color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="jumbotron">
+  <div class="container text-center">
+    <h2>Analyze construction sites with AI <br><br> Eleven Data Challenge - X-HEC</h2>      
+  </div>
+</div>
+  
+<div class="container-fluid bg-3 text-center">    
+  <div class="row">
+
+    <div class="col-sm-2">
+    </div>
+
+    <div class="col-sm-4"> 
+      <h3>Detection result</h3>
+      <img src="../inference/result.png" class="img-responsive" style="width:100%" alt="Image not loaded">
+    </div>
+
+    <div class="col-sm-4"> 
+      <h3>Detected mask</h3>
+      <img src="../inference/pr_mask.png" class="img-responsive" style="width:100%" alt="Image not loaded">
+    </div>
+
+    <div class="col-sm-2">
+    </div>  
+  </div>
+</div>
+
+<br>
+
+<div class="container-fluid bg-3 text-center">
+  <h3>Detected objects</h3>
+  <br>
+  <table border="1" class="dataframe">
+    <tbody>
+      {% for key, value in data.items() %}
+      <tr>
+        <th>{{ key }}</th>
+        <td>{{ value }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+<br>
+<br>
+
+<center>
+  <a href="../inference/pr_polygons.json" download="coordinates"> 
+    <button type="button">Download detected polygons as JSON</button>
+  </a> 
+<center>
+    
+<br>
+<br>
+<br>
+<br>
+
+<footer>
+  <p style="opacity: 0.3" align="center"> 
+    &copy; 2020 - Eleven Data Challenge - Group 6
+  </p>
+</footer> 
+
+</body>
+
+</html>
