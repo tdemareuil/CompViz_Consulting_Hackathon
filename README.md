@@ -1,4 +1,4 @@
-# compviz_consulting_hackathon
+# compviz-consulting-hackathon
 
 This repository holds files related to a 1-week hackathon organized by Eleven Consulting (Paris) in September 2020.
 
@@ -11,6 +11,6 @@ As a group of students from my MSc Data Science at Ecole Polytechnique, we condu
 
 ## Demo
 
-See [here](/modeling/app_demo.mov).
+See video demo [here](/modeling/app_demo.mov).
 
 ![](/modeling/app_demo.mov)
